@@ -1,0 +1,29 @@
+¿Que es Web Storage? 
+
+    Es una de las APIs de HTML5 que nos permite guardar datos de tipo/valor (key/value) sin tener que utilizar cookies, es decir, no depende del tráfico de Internet.
+
+Existen dos mecanismos que nos ofrece Web Storage: localStorage y sessionStorage, que nos permiten almacenar datos en nuestro navegador web, de manera muy similar a los cookies, pero sin tener que utilizar Internet
+
+    localStorage: Como su propio nombre indica, se trata de un espacio de almacenamiento local que nos permite guardar datos de nuestra página. Estos datos no se perderán al cerrar nuestro navegador, sino que seguirán disponibles indefinidamente.
+
+    sessionStorage: Este mecanismo nos permite guardar datos en un almacenamiento local. Se comporta igual a localStorage, con la diferencia que una vez que cerramos el navegador se pierde la información.
+
+¿Qué son las cookies?
+
+    Una cookie es un fichero de datos que una página web le envía a tu ordenador cuando la visitas. Da igual si estás entrando a la web desde el ordenador o desde el móvil, siempre se solicitará el almacenamiento de la cookie. 
+
+    Las cookies suelen utilizarse principalmente para dos finalidades principales: recordar accesos y conocer hábitos de navegación. Las cookies hacen que las páginas web puedan identificar tu ordenador, y por lo tanto, si vuelves a entrar a ellas podrán recordar quién eres y qué has hecho antes dentro de ellas.
+
+    Imagínate que entras en Amazon y colocas muchos archivos en tu cesta de la compra sin tener una cuenta, pero luego te vas. Entonces, cuando vuelvas a entrar, gracias a tu IP y los otros identificadores que miran las cookies, Amazon sabrá quién eres y qué hiciste antes, y muy posiblemente todavía podrá recordar lo que tenías en la cesta de la compra para que no tengas que volver a meterlo.
+
+¿Qué es el cache?
+
+    La principal función de la memoria caché es almacenar datos o instrucciones que la CPU va a necesitar en un futuro inmediato, de manera que se gana velocidad en la ejecución de procesos, evitando que la CPU tenga que esperar y aumentando así el rendimiento del equipo.
+
+    Cada vez que un usuario intente acceder a una información que se encuentra en caché, ésta se servirá directamente desde el almacenamiento sin necesidad de generar nuevas solicitudes.
+
+    De esta forma la caché libera al servidor de la tarea de realizar ciertas peticiones a base de datos y ficheros si encuentra una URL en caché, optimizando todo el proceso de entrega de información.
+
+    Por esta razón la caché web es un factor que no puede faltar en una página web.
+
+    De lo contrario, cada vez que se haga una petición al servidor, el usuario tendrá que esperar a que el servidor realice todas las peticiones necesarias para entregar la información solicitada.

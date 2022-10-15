@@ -1,0 +1,58 @@
+import "./components/index.js";
+enum Screens {
+    login,
+    register,
+    home
+}
+
+class AppContainer extends HTMLElement{
+    screen: Screens = Screens.register;
+
+    constructor(){
+        super();
+        this.attachShadow({mode: 'open'});
+    }
+
+    connectedCallback(){
+        this.render();
+
+        const login = this.shadowRoot?.querySelector("app-login");
+        login?.addEventListener("login-success", ()=>{
+            this.render();
+        })
+
+        const register = this.shadowRoot?.querySelector("app-register");
+        register?.addEventListener("register-success", ()=>{
+            console.log('holi')
+            this.screen = Screens.login;
+            this.render();
+        })
+    }
+
+    render(){
+        if(!this.shadowRoot) return;
+        switch (this.screen) {
+            case Screens.home:
+                this.shadowRoot.innerHTML = "<app-home></app-home>"
+                break;
+        
+            case Screens.login:
+                this.shadowRoot.innerHTML = `
+                <app-login>
+                </app-login>
+                <h1>${localStorage.getItem("email")}</h1>
+                <h1>${localStorage.getItem("password")}</h1>
+                `
+            break;
+            
+            case Screens.register:
+                this.shadowRoot.innerHTML = "<app-register></app-register>"
+            break;
+
+            default:
+                break;
+        }
+    }
+}
+
+customElements.define("app-container",AppContainer);
